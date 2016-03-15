@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reader</title>
+  <style>
+      h3 {
+          display: inline-block;
+      }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    #sketch {
+      height: 200px;
+      width: 200px;
+      border: 1px dashed black;
+      position: relative;
+    }
+    #paint {
+      cursor: crosshair;
+        width : 200px;
+        height: 200px;
+
+    }
+
+      .button{
+          display: inline-block;
+      }
+
+  </style>
+
+    <script src="{{ url_for('static', filename='scripts/resize_image.js') }}"></script>
+
+ </head>
+<body>
+  <h1>Sklearn Reading Example</h1>
+
+  <button class="button" onclick="refresh()">Refresh</button>
+
+  <button class="button" onclick="convertCanvasToImage()">Identify</button>
+
+  <div id="sketch">
+    <canvas id="paint" ></canvas>
+  </div>
+
+  <h3>Result :</h3><h3 id='result'></h3>
+
+    <script src="{{ url_for('static', filename='scripts/drawing_pad.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-1.10.2.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/resize_image.js') }}"></script>
+</body>
+</html>
